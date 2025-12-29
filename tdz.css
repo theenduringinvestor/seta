@@ -54,12 +54,19 @@ header {
   margin: 0;
   font-size: 22px;
   font-weight: 700;
-  text-align: center;
-  /* keep space for the MENU button on the right */
+
+  /* move it left */
+  text-align: left;
+
+  /* space from left edge + keep room for menu button */
+  padding-left: 12px;
+  padding-right: 90px;
+
   width: 100%;
-  padding:0 90px 0 20px;
   white-space: normal;
   word-wrap: break-word;
+}
+
 }
 
 @media (max-width: 600px) {
