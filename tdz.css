@@ -52,8 +52,20 @@ header {
 
 .site-title {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
+  text-align: center;
+  /* keep space for the MENU button on the right */
+  max-width: calc(100% - 130px);
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 18px;
+    line-height: 1.1;
+  }
 }
 
 /* hamburger button on the right */
@@ -342,7 +354,7 @@ header {
   width: 100%;
 }
 
-/* clickable tubi badge */
+/* clickable Tubi badge */
 .film-badge {
   position: absolute;
   top: 8px;
