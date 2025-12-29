@@ -56,7 +56,8 @@ header {
   font-weight: 700;
   text-align: center;
   /* keep space for the MENU button on the right */
-  max-width: calc(100% - 130px);
+  width: 100%;
+  padding:0 90px 0 20px;
   white-space: normal;
   word-wrap: break-word;
 }
