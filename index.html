@@ -9,7 +9,7 @@
 
   <body>
     <!-- =======================
-         HEADER (TITLE + HAMBURGER)
+         HEADER
     ======================== -->
     <header>
       <h1 class="site-title">ShawElias Talent Agency</h1>
@@ -23,7 +23,6 @@
         <span class="nav-toggle__label">MENU</span>
       </button>
 
-      <!-- glass dropdown menu -->
       <nav class="nav-menu">
         <a href="#films">Films</a>
         <a href="#casting">Casting</a>
@@ -35,7 +34,7 @@
 
     <main>
       <!-- =======================
-           HERO (3 COLUMNS: KS | PANEL | RA)
+           HERO (KS | PANEL | RA)
       ======================== -->
       <section class="hero js-fade">
         <!-- LEFT: KS -->
@@ -53,7 +52,7 @@
           </div>
         </div>
 
-        <!-- CENTER: LOGO + TEXT PANEL -->
+        <!-- CENTER: LOGO + TEXT -->
         <div class="hero__col hero__col--panel">
           <div class="hero__panel">
             <img
@@ -104,7 +103,7 @@
       </section>
 
       <!-- =======================
-           FEATURED FILMS (2-SLIDE SLIDER)
+           FEATURED FILMS
       ======================== -->
       <section id="films" class="js-fade">
         <h2>Featured Films</h2>
@@ -273,7 +272,7 @@
         showFilmSlide(filmIndex);
       }
 
-      // FADE-IN ON SCROLL
+      // SUBTLE FADE-IN
       const animatedEls = document.querySelectorAll(".js-fade");
       const observer = new IntersectionObserver(
         (entries, obs) => {
