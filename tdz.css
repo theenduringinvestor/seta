@@ -48,10 +48,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  position: sticky;
 }
 
-/* centered site title */
 .site-title {
   margin: 0;
   font-size: 20px;
@@ -92,24 +90,19 @@ header {
 }
 
 /* glass slide-down nav */
-
 .nav-menu {
   position: absolute;
   top: 60px;
   right: 20px;
-
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255, 0, 0, 0.6);
   border-radius: 14px;
-
   padding: 10px 14px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -122,7 +115,6 @@ header {
 }
 
 /* open state */
-
 .nav-menu.open {
   max-height: 300px;
   opacity: 1;
@@ -130,12 +122,12 @@ header {
 }
 
 /* ==============================
-   HERO (3 equal-ish columns)
+   HERO (3 COLUMNS)
 ============================== */
 
 .hero {
   display: grid;
-  grid-template-columns: 0.9fr 1.2fr 0.9fr; /* KS | PANEL | RA */
+  grid-template-columns: 0.9fr 1.2fr 0.9fr;
   gap: 16px;
   padding: 16px;
   max-width: 1150px;
@@ -148,23 +140,24 @@ header {
   align-items: stretch;
 }
 
-/* KS & RA images same size */
+/* wrapper so IG badge can sit on top */
+.hero__img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* KS & RA images */
 .hero__col--image img {
   width: 100%;
   height: 100%;
   max-height: 480px;
   object-fit: cover;
-  border-radius: 12px;
 }
 
-/* wrapper so IG badge can position */
-.hero__img-wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* center panel same height but allowed to grow */
+/* center panel */
 .hero__panel {
   width: 100%;
   background: #000;
@@ -196,11 +189,13 @@ header {
     margin: 20px auto 40px;
   }
 
-  .hero__col--image img {
-    width: 100%;
+  .hero__img-wrap {
     height: auto;
-    max-height: 360px;
-    object-fit: cover;
+  }
+
+  .hero__col--image img {
+    height: auto;
+    max-height: none;
   }
 
   .hero__panel {
@@ -227,10 +222,10 @@ header {
   align-items: center;
   gap: 6px;
   text-decoration: none;
+  z-index: 2;
   transition: 0.3s ease;
 }
 
-/* neon glow */
 .ig-badge.neon {
   box-shadow: 0 0 8px red, 0 0 15px red;
 }
@@ -240,7 +235,7 @@ header {
   transform: translateY(-1px);
 }
 
-/* svg ig icon */
+/* fake SVG icon via data URI */
 .ig-icon-svg {
   width: 16px;
   height: 16px;
@@ -251,7 +246,6 @@ header {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='black' stroke='red' stroke-width='25' d='M224 202.66A53.34 53.34 0 1 0 277.34 256 53.38 53.38 0 0 0 224 202.66Zm124.71-41a54 54 0 1 0 54 54 54 54 0 0 0-54-54ZM398.8 80A93.36 93.36 0 0 0 368 69.26C331.6 64 224 64 224 64S116.4 64 80 69.26A93.36 93.36 0 0 0 49.2 80a93.78 93.78 0 0 0-34 34C9.94 150.6 8 224 8 224s1.94 73.4 7.26 109.8a93.78 93.78 0 0 0 34 34A93.36 93.36 0 0 0 80 382.74C116.4 388 224 388 224 388s107.6 0 144-5.26a93.36 93.36 0 0 0 30.8-10.74 93.78 93.78 0 0 0 34-34C438.06 297.4 440 224 440 224s-1.94-73.4-7.26-109.8a93.78 93.78 0 0 0-34-34ZM224 338a82 82 0 1 1 82-82 82 82 0 0 1-82 82Z'/></svg>");
 }
 
-/* mobile badge tweak */
 @media (max-width: 600px) {
   .ig-badge {
     font-size: 0.65rem;
@@ -283,7 +277,7 @@ header {
 ============================== */
 
 #films {
-  padding: 40px 20px;
+  padding: 40px 16px;
   text-align: center;
 }
 
@@ -338,7 +332,6 @@ header {
   gap: 12px;
 }
 
-/* poster wrapper */
 .film__poster-wrap {
   position: relative;
   border-radius: 10px;
@@ -394,20 +387,29 @@ header {
   border: 1px solid rgba(255, 0, 0, 0.5);
 }
 
-/* mobile films */
+/* mobile films: stack + bigger trailers */
 @media (max-width: 768px) {
   .film {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .film__poster {
     width: 100%;
-    max-width: 280px;
+    max-width: 320px;
   }
 
   .film__trailer {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .film__trailer iframe {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -454,3 +456,4 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
