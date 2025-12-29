@@ -1,0 +1,382 @@
+/* ==============================
+   GLOBAL
+============================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: red;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+span,
+button {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==============================
+   HEADER + HAMBURGER
+============================== */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* hamburger button */
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #000;
+  border: 1px solid red;
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.nav-toggle__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nav-toggle__bars span {
+  width: 16px;
+  height: 2px;
+  background: linear-gradient(90deg, red, black);
+  border-radius: 999px;
+}
+
+.nav-toggle__label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* glass slide-down nav */
+
+.nav-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  border-radius: 14px;
+
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+
+.nav-menu a {
+  font-weight: bold;
+}
+
+/* open state */
+
+.nav-menu.open {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================
+   HERO (3 equal columns)
+============================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr 0.9fr; /* KS | PANEL | RA */
+  gap: 16px;
+  padding: 16px;
+  max-width: 1150px;
+  margin: 30px auto;
+}
+
+.hero__col {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* KS & RA images same size */
+
+.hero__col--image img {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* hero panel same height */
+
+.hero__panel {
+  width: 100%;
+  background: #000;
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 26px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__logo {
+  width: 110px;
+  max-width: 60%;
+  margin: 0 auto 12px;
+}
+
+/* mobile stack */
+
+@media (max-width: 820px) {
+  .hero {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+  }
+
+  .hero__col--image img,
+  .hero__panel {
+    max-height: 420px;
+  }
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn--light {
+  background: #000;
+  border: 1px solid red;
+}
+
+/* ==============================
+   FEATURED FILMS SLIDER
+============================== */
+
+#films {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#films h2 {
+  margin-bottom: 20px;
+}
+
+.film-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.film-slider__track {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* arrows */
+
+.film-slider__btn {
+  background: #000;
+  color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* slide */
+
+.film {
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.film-slide--active {
+  display: flex;
+}
+
+/* poster area */
+
+.film__poster {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.film__poster-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.film__poster-wrap img {
+  width: 100%;
+}
+
+/* tubi badge clickable */
+
+.film-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid red;
+}
+
+/* description */
+
+.film-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* trailer column */
+
+.film__trailer {
+  flex: 1;
+  max-width: 640px;
+}
+
+.trailer-btn {
+  background: #000;
+  border: 1px solid red;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.film__trailer iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  .film {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .film__poster {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .film__trailer {
+    width: 100%;
+  }
+}
+
+/* ==============================
+   CASTING & JOIN
+============================== */
+
+#casting,
+#join {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#casting p,
+#join p {
+  max-width: 700px;
+  margin: 10px auto 0;
+  line-height: 1.6;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  border-top: 1px solid rgba(255, 0, 0, 0.4);
+  font-size: 0.85rem;
+}
+
+/* ==============================
+   FADE-IN ANIMATION
+============================== */
+
+.js-fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.js-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

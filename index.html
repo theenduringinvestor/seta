@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShawElias Talent Agency</title>
+    <link rel="stylesheet" href="tdz.css" />
+  </head>
+
+  <body>
+    <!-- =======================
+         HEADER (HAMBURGER ONLY)
+    ======================== -->
+    <header>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <div class="nav-toggle__bars">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="nav-toggle__label">MENU</span>
+      </button>
+
+      <!-- glass dropdown menu -->
+      <nav class="nav-menu">
+        <a href="#films">Films</a>
+        <a href="#casting">Casting</a>
+        <a href="#join">Join</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =======================
+           HERO (3 COLUMNS: KS | PANEL | RA)
+      ======================== -->
+      <section class="hero js-fade">
+        <!-- LEFT: KS -->
+        <div class="hero__col hero__col--image">
+          <img src="ks.jpg" alt="Kareem Shaw" />
+        </div>
+
+        <!-- CENTER: LOGO + TEXT PANEL -->
+        <div class="hero__col hero__col--panel">
+          <div class="hero__panel">
+            <img
+              src="setaalt.png"
+              alt="ShawElias Talent Agency Logo"
+              class="hero__logo"
+            />
+
+            <h2>Real People. Real Roles. Real Shots On Screen.</h2>
+
+            <p>
+              We connect everyday people, actors, performers, and creators with
+              indie films, web series, visuals, and upcoming productions. No
+              contracts — just a real way to get seen when new roles drop.
+            </p>
+
+            <p>
+              Be considered for projects like
+              <strong>Yo Bro: The Movie</strong>, <strong>The Ganja</strong>,
+              and more ShawElias productions.
+            </p>
+
+            <a href="#join" class="btn btn--light">
+              Join the Casting Network — Free
+            </a>
+
+            <p class="hero__tagline">
+              Actors • Models • Rappers • Creators — all experience levels
+              welcome.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: RA -->
+        <div class="hero__col hero__col--image">
+          <img src="ra.jpg" alt="Ra Certified" />
+        </div>
+      </section>
+
+      <!-- =======================
+           FEATURED FILMS (2-SLIDE SLIDER)
+      ======================== -->
+      <section id="films" class="js-fade">
+        <h2>Featured Films</h2>
+
+        <div class="film-slider" id="film-slider">
+          <!-- PREV -->
+          <button
+            class="film-slider__btn film-slider__btn--prev"
+            aria-label="Previous film"
+          >
+            &#10094;
+          </button>
+
+          <div class="film-slider__track">
+            <!-- SLIDE 1: YO BRO -->
+            <article class="film film-slide film-slide--active">
+              <div class="film__poster">
+                <div class="film__poster-wrap">
+                  <a
+                    href="https://tubitv.com/movies/100044287/yo-bro-the-movie"
+                    target="_blank"
+                    class="film-badge"
+                  >
+                    Available on Tubi
+                  </a>
+                  <img src="yobro.jpg" alt="Yo Bro: The Movie poster" />
+                </div>
+
+                <p class="film-desc">
+                  A Philly comedy about friendship, hustle, and crazy
+                  situations.
+                </p>
+              </div>
+
+              <div class="film__trailer">
+                <button class="trailer-btn">▶ Watch Trailer</button>
+
+                <iframe
+                  src="https://www.youtube.com/embed/pOcjqiOZS5w"
+                  title="Yo Bro: The Movie trailer"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+
+            <!-- SLIDE 2: THE GANJA -->
+            <article class="film film-slide">
+              <div class="film__poster">
+                <div class="film__poster-wrap">
+                  <a
+                    href="https://tubitv.com/movies/100023457/the-ganja"
+                    target="_blank"
+                    class="film-badge"
+                  >
+                    Available on Tubi
+                  </a>
+                  <img src="tg.jpg" alt="The Ganja poster" />
+                </div>
+
+                <p class="film-desc">
+                  A gritty street drama of loyalty, money, and consequences.
+                </p>
+              </div>
+
+              <div class="film__trailer">
+                <button class="trailer-btn">▶ Watch Trailer</button>
+
+                <iframe
+                  src="https://www.youtube.com/embed/xHb7pkAt0Sg"
+                  title="The Ganja trailer"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+          </div>
+
+          <!-- NEXT -->
+          <button
+            class="film-slider__btn film-slider__btn--next"
+            aria-label="Next film"
+          >
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <!-- =======================
+           CASTING
+      ======================== -->
+      <section id="casting" class="js-fade">
+        <h2>Casting &amp; Opportunities</h2>
+
+        <p>
+          Join the network to get casting notices for upcoming film and visual
+          projects.
+        </p>
+
+        <p>
+          Whether you're brand new or experienced, ShawElias gives you a real
+          chance to work in active productions.
+        </p>
+      </section>
+
+      <!-- =======================
+           JOIN
+      ======================== -->
+      <section id="join" class="js-fade">
+        <h2>Join the Talent Network</h2>
+
+        <p>
+          Free to join. Get casting alerts and updates straight to your inbox.
+        </p>
+
+        <a href="#" class="btn btn--light">Get Notified About Castings</a>
+
+        <p>You’ll receive the link to submit your info.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 ShawElias Talent Agency. All rights reserved.</p>
+    </footer>
+
+    <!-- =======================
+         JS
+    ======================== -->
+    <script>
+      // HAMBURGER TOGGLE
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("open");
+        });
+      }
+
+      // FILM SLIDER
+      const filmSlider = document.getElementById("film-slider");
+      if (filmSlider) {
+        const filmSlides = filmSlider.querySelectorAll(".film-slide");
+        const prevFilmBtn = filmSlider.querySelector(".film-slider__btn--prev");
+        const nextFilmBtn = filmSlider.querySelector(".film-slider__btn--next");
+        let filmIndex = 0;
+
+        function showFilmSlide(i) {
+          filmSlides.forEach((slide, idx) => {
+            slide.classList.toggle("film-slide--active", idx === i);
+          });
+        }
+
+        nextFilmBtn.addEventListener("click", () => {
+          filmIndex = (filmIndex + 1) % filmSlides.length;
+          showFilmSlide(filmIndex);
+        });
+
+        prevFilmBtn.addEventListener("click", () => {
+          filmIndex = (filmIndex - 1 + filmSlides.length) % filmSlides.length;
+          showFilmSlide(filmIndex);
+        });
+
+        showFilmSlide(filmIndex);
+      }
+
+      // FADE-IN ON SCROLL
+      const animatedEls = document.querySelectorAll(".js-fade");
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      animatedEls.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
