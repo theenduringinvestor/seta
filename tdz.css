@@ -47,33 +47,30 @@ header {
   border-bottom: 1px solid rgba(255, 0, 0, 0.4);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
+/* centered title with room for MENU on the right */
 .site-title {
   margin: 0;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 800;
+  text-align: center;
 
-  /* move it left */
-  text-align: left;
-
-  /* space from left edge + keep room for menu button */
-  padding-left: 12px;
-  padding-right: 90px;
-
+  /* keep it centered but leave space for the button */
   width: 100%;
+  max-width: calc(100% - 140px);
+  margin-inline: auto;
+
   white-space: normal;
   word-wrap: break-word;
-}
-
 }
 
 @media (max-width: 600px) {
   .site-title {
     font-size: 18px;
     line-height: 1.1;
-     padding:0 80px 0 16px;/ a little tighter on tiny screens*/
+    max-width: calc(100% - 120px);
   }
 }
 
@@ -477,4 +474,3 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-
