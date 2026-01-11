@@ -175,11 +175,12 @@ header {
   font-size: 0.95rem;
 }
 
-/* 4 columns desktop, responsive mobile */
+/* 3 columns desktop, responsive mobile */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  justify-items: center;
 
   /* centers the grid block */
   max-width: 980px;
@@ -207,6 +208,24 @@ header {
   object-fit: cover; /* crop to keep ratio clean */
   object-position: top; /* show top of image */
   border-radius: 8px;
+}
+
+/* Mobile: 1 photo per row */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }
 
 /* caption under each photo */
