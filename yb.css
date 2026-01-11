@@ -46,6 +46,7 @@ header {
   border-bottom: 1px solid rgba(255, 0, 0, 0.35);
   position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -55,16 +56,14 @@ header {
   font-size: 20px;
   font-weight: 800;
   text-align: center;
-
-  width: 100%;
-  padding: 0 92px; /* space so MENU doesn't overlap */
+  padding-right: 95px;
   line-height: 1.1;
 }
 
 @media (max-width: 420px) {
   .site-title {
     font-size: 18px;
-    padding: 0 86px;
+    padding-right: 86px;
   }
 }
 
@@ -72,15 +71,13 @@ header {
 .nav-toggle {
   position: absolute;
   right: 14px;
-
+  top: 8px;
   display: flex;
   align-items: center;
   gap: 6px;
-
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(255, 0, 0, 0.45);
   border-radius: 999px;
-
   padding: 6px 10px;
   cursor: pointer;
 }
