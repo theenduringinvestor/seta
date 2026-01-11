@@ -27,10 +27,8 @@ img {
 
 header {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   padding: 10px 20px;
   background: #000;
   border-bottom: 1px solid rgba(255, 0, 0, 0.4);
@@ -46,6 +44,7 @@ header {
   font-size: 22px;
   font-weight: 800;
   text-align: center;
+  padding-right: 95px;
   color: red;
 }
 
@@ -54,6 +53,9 @@ header {
 =========================== */
 
 .nav-toggle {
+  position: absolute;
+  right: 14px;
+  top: 8px;
   display: flex;
   align-items: center;
   gap: 6px;
