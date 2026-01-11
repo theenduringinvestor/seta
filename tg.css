@@ -2,6 +2,13 @@
    GLOBAL
 =========================== */
 
+/* Reset all default spacing */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -9,11 +16,20 @@
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background: #000;
   color: red;
   padding-top: 60px;
+}
+
+/* Remove default top margins to prevent margin collapse */
+main,
+section,
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
 img {
