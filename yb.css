@@ -49,15 +49,13 @@ header {
   z-index: 1000;
 }
 
-/* centered title, with room for menu */
+/* centered title */
 .site-title {
   margin: 0;
   font-size: 20px;
   font-weight: 800;
   text-align: center;
-
   width: 100%;
-  padding: 0 92px; /* space so MENU doesn't overlap */
   line-height: 1.1;
 }
 
@@ -68,10 +66,11 @@ header {
   }
 }
 
-/* hamburger button */
+/* hamburger button centered */
 .nav-toggle {
   position: absolute;
-  right: 14px;
+  left: 50%;
+  transform: translateX(-50%);
 
   display: flex;
   align-items: center;

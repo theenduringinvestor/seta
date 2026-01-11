@@ -42,9 +42,6 @@ header {
   font-size: 22px;
   font-weight: 800;
   text-align: center;
-
-  /* leave space on right for menu */
-  padding-right: 95px;
   color: red;
 }
 
@@ -54,7 +51,8 @@ header {
 
 .nav-toggle {
   position: absolute;
-  right: 14px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 8px;
 
   display: flex;
