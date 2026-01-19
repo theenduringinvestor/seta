@@ -26,7 +26,13 @@ img {
   display: block;
 }
 
-h1, h2, h3, p, a, span, button {
+h1,
+h2,
+h3,
+p,
+a,
+span,
+button {
   color: red;
 }
 
@@ -53,7 +59,7 @@ header {
 
 .site-title {
   margin: 0;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
   padding-right: 95px;
@@ -110,7 +116,10 @@ header {
   overflow: hidden;
   opacity: 0;
   transform: translateY(-10px);
-  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .nav-menu a {
@@ -276,11 +285,15 @@ footer {
 }
 
 .ig-badge.neon {
-  box-shadow: 0 0 8px red, 0 0 15px red;
+  box-shadow:
+    0 0 8px red,
+    0 0 15px red;
 }
 
 .ig-badge.neon:hover {
-  box-shadow: 0 0 15px #ff1c1c, 0 0 30px #ff1c1c;
+  box-shadow:
+    0 0 15px #ff1c1c,
+    0 0 30px #ff1c1c;
   transform: translateY(-1px);
 }
 
@@ -310,7 +323,7 @@ footer p {
 
 @media (max-width: 768px) {
   .site-title {
-    font-size: 18px;
+    font-size: 16px;
     padding-right: 90px;
   }
 

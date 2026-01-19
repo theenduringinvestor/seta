@@ -11,7 +11,12 @@
 body {
   margin: 0;
   /* same font family as homepage */
-  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Arial,
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Arial,
     sans-serif;
 
   /* match homepage background */
@@ -67,7 +72,7 @@ header {
 /* center title, leave space for MENU button on right */
 .site-title {
   margin: 0;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
   /* leave space on right for menu */
@@ -77,7 +82,7 @@ header {
 
 @media (max-width: 600px) {
   .site-title {
-    font-size: 19px;
+    font-size: 16px;
     padding-right: 88px;
   }
 }
@@ -140,7 +145,10 @@ header {
   overflow: hidden;
   opacity: 0;
   transform: translateY(-10px);
-  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .nav-menu a {
